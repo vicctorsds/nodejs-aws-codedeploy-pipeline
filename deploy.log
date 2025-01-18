@@ -1,0 +1,81 @@
+run after_install.sh: 
+cd /home/ec2-user/nodejs-server-cicd
+npm install
+
+up to date, audited 58 packages in 832ms
+
+7 packages are looking for funding
+  run `npm fund` for details
+
+6 vulnerabilities (3 low, 3 high)
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+run application_start.sh: 
+pm2 restart nodejs-express-app
+
+                        -------------
+
+__/\\\\\\\\\\\\\____/\\\\____________/\\\\____/\\\\\\\\\_____
+ _\/\\\/////////\\\_\/\\\\\\________/\\\\\\__/\\\///////\\\___
+  _\/\\\_______\/\\\_\/\\\//\\\____/\\\//\\\_\///______\//\\\__
+   _\/\\\\\\\\\\\\\/__\/\\\\///\\\/\\\/_\/\\\___________/\\\/___
+    _\/\\\/////////____\/\\\__\///\\\/___\/\\\________/\\\//_____
+     _\/\\\_____________\/\\\____\///_____\/\\\_____/\\\//________
+      _\/\\\_____________\/\\\_____________\/\\\___/\\\/___________
+       _\/\\\_____________\/\\\_____________\/\\\__/\\\\\\\\\\\\\\\_
+        _\///______________\///______________\///__\///////////////__
+
+
+                          Runtime Edition
+
+        PM2 is a Production Process Manager for Node.js applications
+                     with a built-in Load Balancer.
+
+                Start and Daemonize any application:
+                $ pm2 start app.js
+
+                Load Balance 4 instances of api.js:
+                $ pm2 start api.js -i 4
+
+                Monitor in production:
+                $ pm2 monitor
+
+                Make pm2 auto-boot at server restart:
+                $ pm2 startup
+
+                To go further checkout:
+                http://pm2.io/
+
+
+                        -------------
+
+[PM2] Spawning PM2 daemon with pm2_home=/home/ec2-user/.pm2
+[PM2] PM2 Successfully daemonized
+Use --update-env to update environment variables
+run after_install.sh: 
+cd /home/ec2-user/nodejs-server-cicd
+npm install
+
+up to date, audited 58 packages in 838ms
+
+7 packages are looking for funding
+  run `npm fund` for details
+
+6 vulnerabilities (3 low, 3 high)
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+run application_start.sh: 
+pm2 restart nodejs-express-app
+Use --update-env to update environment variables
+run application_start.sh: 
+pm2 restart nodejs-express-app
+Use --update-env to update environment variables
+run application_start.sh: 
+pm2 restart nodejs-express-app
+Use --update-env to update environment variables
