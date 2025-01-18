@@ -4,7 +4,7 @@ files:
   - source: /
     destination: /home/ec2-user/nodejs-aws-codedeploy-pipeline
     overwrite: yes  # Garante que arquivos existentes sejam sobrescritos
-    file_exists_behavior: OVERWRITE
+file_exists_behavior: OVERWRITE
 hooks:
   # Descomente e configure conforme necessário se for adicionar mais hooks
   # ApplicationStop:
