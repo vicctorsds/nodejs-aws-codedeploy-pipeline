@@ -17,17 +17,6 @@ hooks:
   #   location: scripts/download_bundle.sh
   #   timeout: 300
   #   runas: root
-
-  BeforeInstall:
-    - location: scripts/before_install.sh
-      timeout: 300
-      runas: root
-  
-  Install:
-    - location: scripts/install.sh
-      timeout: 300
-      runas: root
-
   AfterInstall:
     - location: scripts/after_install.sh
       timeout: 300
@@ -35,11 +24,5 @@ hooks:
 
   ApplicationStart:
     - location: scripts/application_start.sh
-      timeout: 300
-      runas: root
-
-  # Validar o serviço após a instalação e o início do aplicativo
-  ValidateService:
-    - location: scripts/validate_service.sh
       timeout: 300
       runas: root
