@@ -3,21 +3,43 @@ os: linux
 files:
   - source: /
     destination: /home/ec2-user/nodejs-aws-codedeploy-pipeline
-    overwrite: yes
+    overwrite: yes  # Garante que arquivos existentes sejam sobrescritos
+
 hooks:
-# ApplicationStop:
-# DownloadBundle:
-#  BeforeInstall:
-#    - location: scripts/before_install.sh
-#      timeout: 300
-#      runas: root
-# Install:
+  # Descomente e configure conforme necessário se for adicionar mais hooks
+  # ApplicationStop:
+  #   location: scripts/application_stop.sh
+  #   timeout: 300
+  #   runas: root
+  
+  # Para baixar o bundle, se necessário, você pode adicionar o hook DownloadBundle.
+  # DownloadBundle:
+  #   location: scripts/download_bundle.sh
+  #   timeout: 300
+  #   runas: root
+
+  BeforeInstall:
+    - location: scripts/before_install.sh
+      timeout: 300
+      runas: root
+  
+  Install:
+    - location: scripts/install.sh
+      timeout: 300
+      runas: root
+
   AfterInstall:
     - location: scripts/after_install.sh
       timeout: 300
       runas: root
+
   ApplicationStart:
     - location: scripts/application_start.sh
       timeout: 300
       runas: root
-# ValidateService:
+
+  # Validar o serviço após a instalação e o início do aplicativo
+  ValidateService:
+    - location: scripts/validate_service.sh
+      timeout: 300
+      runas: root
