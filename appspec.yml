@@ -3,6 +3,7 @@ os: linux
 files:
   - source: /
     destination: /home/ec2-user/nodejs-aws-codedeploy-pipeline
+    overwrite: yes
 hooks:
 # ApplicationStop:
 # DownloadBundle:
