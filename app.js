@@ -4,7 +4,7 @@ const hostname = '127.0.0.1'; // Your server ip address
 const port = 3000;
 
 <<<<<<< HEAD
-const version = 'teste';
+const version = '1';
 =======
 const version = '500';
 >>>>>>> 0b180d22f560bc7411df7e2b85743884bb1f8da6
